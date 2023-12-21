@@ -1,0 +1,22 @@
+.container__input {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+.start__stop {
+  max-width: 600px;
+  margin: 0 auto;
+}
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+select:focus {
+  outline-color: #1b2432; /* Change color on focus */
+}
