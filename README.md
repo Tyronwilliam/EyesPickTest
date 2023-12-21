@@ -8,16 +8,17 @@ npm install
 
 npm run dev
 
-If your facing some server error please : 
+If your facing some server error please :
 
-1. Check the console 
-2. Click on the blue link, you see on the error display 
-3. Allow CORS from anywhere 
-
+1. Check the console
+2. Click on the blue link, you see on the error display
+3. Allow CORS from anywhere
 
 Clone the repos here : git@github.com:Tyronwilliam/EyesPickTest.git
 
 ### **Overview**
+
+Full Description here : https://ipick.notion.site/Front-End-Developer-Exercise-3D-Maze-Solver-Interface-ff522a3ff9ad4b3f862b2d1c58dfba20
 
 Your task is to create a web interface that allows users to interact with a 3D maze-solving API. The 3D maze is a grid of size (N x M x K). Each cell of a grid is either an empty cell, noted **0** or an obstacle, noted **1.**
 
