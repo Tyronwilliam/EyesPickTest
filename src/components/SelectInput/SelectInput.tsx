@@ -10,7 +10,6 @@ interface SelectInputProps {
 const SelectInput = ({ label, options, value, onChange }: SelectInputProps) => {
   const handleChange = (e: ChangeEvent<HTMLSelectElement>) => {
     const selectedValue = parseInt(e.target.value) || 0;
-    console.log(selectedValue);
     onChange(selectedValue);
   };
 
