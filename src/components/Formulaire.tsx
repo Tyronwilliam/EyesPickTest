@@ -8,6 +8,8 @@ import "./formulaire.css";
 export type FormCombinedProps = LayoutStartAndStopProps &
   LayoutDimensionProps & {
     handleSubmitForm: (e: FormEvent, mazedimension: MazeDimensions) => void;
+    positionStartInput: any;
+    positionStopInput: any;
   };
 
 const Formulaire = ({
@@ -18,6 +20,8 @@ const Formulaire = ({
   stopPosition,
   setStopPosition,
   setStartPosition,
+  positionStartInput,
+  positionStopInput,
 }: FormCombinedProps) => {
   return (
     <form
@@ -36,6 +40,8 @@ const Formulaire = ({
           setStartPosition={setStartPosition}
           stopPosition={stopPosition}
           setStopPosition={setStopPosition}
+          positionStartInput={positionStartInput}
+          positionStopInput={positionStopInput}
         />
       </div>
       <button type="submit">Générer mon labyrinthe</button>

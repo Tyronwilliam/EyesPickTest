@@ -32,6 +32,11 @@ export const getMaterial = (value: number) => {
         color: 0x0000ff,
         wireframe: true,
       }); // Blue
+    case 3:
+      return new THREE.MeshBasicMaterial({
+        color: 0x0000ff,
+        wireframe: true,
+      }); // Blue
     default:
       return new THREE.MeshBasicMaterial({
         color: 0x808080,

@@ -1,5 +1,4 @@
 import React from "react";
-import { selectInputStartStop } from "../../utils/inputValue";
 import { SelectInput } from "..";
 import { Position } from "../../utils/interface";
 
@@ -8,6 +7,8 @@ export type LayoutStartAndStopProps = {
   setStartPosition: React.Dispatch<React.SetStateAction<Position>>;
   stopPosition: Position;
   setStopPosition: React.Dispatch<React.SetStateAction<Position>>;
+  positionStartInput: any;
+  positionStopInput: any;
 };
 
 const LayoutStartAndStop = ({
@@ -15,13 +16,15 @@ const LayoutStartAndStop = ({
   setStartPosition,
   stopPosition,
   setStopPosition,
+  positionStartInput,
+  positionStopInput,
 }: LayoutStartAndStopProps) => {
   return (
     <>
       <div className="col__flex">
         <SelectInput
           label="Start X"
-          options={selectInputStartStop}
+          options={positionStartInput.x || []}
           value={startPosition.x || 0}
           onChange={(newValue: number) =>
             setStartPosition({ ...startPosition, x: newValue })
@@ -31,7 +34,7 @@ const LayoutStartAndStop = ({
       <div className="col__flex">
         <SelectInput
           label="Start Y"
-          options={selectInputStartStop}
+          options={positionStartInput.y || []}
           value={startPosition.y || 0}
           onChange={(newValue: number) =>
             setStartPosition({ ...startPosition, y: newValue })
@@ -41,7 +44,7 @@ const LayoutStartAndStop = ({
       <div className="col__flex">
         <SelectInput
           label="Start Z"
-          options={selectInputStartStop}
+          options={positionStartInput.z || []}
           value={startPosition.z || 0}
           onChange={(newValue: number) =>
             setStartPosition({ ...startPosition, z: newValue })
@@ -51,7 +54,7 @@ const LayoutStartAndStop = ({
       <div className="col__flex">
         <SelectInput
           label="Stop X"
-          options={selectInputStartStop}
+          options={positionStopInput.x || []}
           value={stopPosition.x || 0}
           onChange={(newValue: number) =>
             setStopPosition({ ...stopPosition, x: newValue })
@@ -61,7 +64,7 @@ const LayoutStartAndStop = ({
       <div className="col__flex">
         <SelectInput
           label="Stop Y"
-          options={selectInputStartStop}
+          options={positionStopInput.y || []}
           value={stopPosition.y || 0}
           onChange={(newValue: number) =>
             setStopPosition({ ...stopPosition, y: newValue })
@@ -71,7 +74,7 @@ const LayoutStartAndStop = ({
       <div className="col__flex">
         <SelectInput
           label="Stop Z"
-          options={selectInputStartStop}
+          options={positionStopInput.z || []}
           value={stopPosition.z || 0}
           onChange={(newValue: number) =>
             setStopPosition({ ...stopPosition, z: newValue })

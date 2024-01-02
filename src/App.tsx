@@ -12,6 +12,8 @@ function App() {
     setStopPosition,
     handleSubmitForm,
     mazeSolution,
+    positionStartInput,
+    positionStopInput,
   } = useGenerateMaze();
   const mazeSolutionLength = mazeSolution?.length;
   return (
@@ -27,6 +29,8 @@ function App() {
           stopPosition={stopPosition}
           setStopPosition={setStopPosition}
           setStartPosition={setStartPosition}
+          positionStartInput={positionStartInput}
+          positionStopInput={positionStopInput}
         />
       </section>
       <div className="maze-container">
